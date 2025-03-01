@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flirty Questions</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 100px;
+            padding: 20px;
+        }
+        .question-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 10px;
+            font-size: 1.5em;
+        }
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background: white;
+            color: #ff758c;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Flirty Questions 💕</h1>
+        <div class="question-box" id="question">Press the button to get a flirty question!</div>
+        <button class="button" onclick="newQuestion()">Next Question</button>
+        <br>
+        <a href="index.html" class="button">Back to Home</a>
+    </div>
+    <script>
+        const questions = [
+        "What’s the sexiest thing about me? 😘",
+        "What porn are you watching right now? 🍰",
+        "Would you rather cuddle all night or have a spontaneous make-out session? 😏",
+        "If we could escape anywhere together right now, what will you do? ✈️",
+        "What’s one thing you’ve always wanted to do with me but haven’t yet? 🔥",
+        "What’s your favorite memory of us together? 💖",
+        "What’s something small I do that turns you on? 😍",
+        ];
+        
+        function newQuestion() {
+            const randomIndex = Math.floor(Math.random() * questions.length);
+            document.getElementById("question").innerText = questions[randomIndex];
+        }
+    </script>
+</body>
+</html>
